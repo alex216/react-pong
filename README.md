@@ -1,4 +1,4 @@
-# @alex/react18-pong
+# @alexium216/react-pong
 
 A simple ping-pong game as a React component built with TypeScript.
 
@@ -6,20 +6,20 @@ A simple ping-pong game as a React component built with TypeScript.
 
 Inspired by [Max Wihlborg](https://github.com/maxwihlborg/youtube-tutorials)
 
-[See demo here](http://ohall.github.io/@alex/react18-pong)
+[See demo here](https://github.com/alexium216/react-pong)
 
 ## Installation
 
 ```bash
-npm install --save @alex/react18-pong
+npm install --save @alexium216/react-pong
 ```
 
 ## Usage
 
 ```tsx
-import Pong from '@alex/react18-pong';
+import Pong from "@alexium216/react-pong";
 
-<Pong />
+<Pong />;
 ```
 
 ### With custom props
