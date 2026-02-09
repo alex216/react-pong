@@ -1,14 +1,32 @@
 {
-  "name": "react-pong",
+  "name": "@alex/react18-pong",
   "version": "1.1.1",
-  "description": "A react ping pong game component",
-  "main": "index.js",
+  "description": "A React 18 ping pong game component built with TypeScript",
+  "main": "./dist/react18-pong.umd.js",
+  "module": "./dist/react18-pong.es.js",
+  "types": "./dist/lib.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/lib.d.ts",
+      "import": "./dist/react18-pong.es.js",
+      "require": "./dist/react18-pong.umd.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "prebuild": "npm run lint:fix",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ohall/react-pong.git"
+    "url": "https://github.com/alex216/react-pong.git"
   },
   "keywords": [
     "react-component",
@@ -20,21 +38,27 @@
   "author": "Oakley Hall",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ohall/react-pong/issues"
+    "url": "https://github.com/alex216/react-pong/issues"
   },
-  "homepage": "https://github.com/ohall/react-pong",
+  "homepage": "https://github.com/alex216/react-pong",
   "dependencies": {
-    "lodash": "^4.17.5",
-    "react": "^0.14.6"
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "babel": "^5.5.8",
-    "babelify": "^6.1.2",
-    "browserify": "^10.2.4",
-    "del": "^1.2.0",
-    "eslint": "^0.11.0-alpha.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
-    "vinyl-source-stream": "^1.1.0"
+    "@types/lodash": "^4.17.15",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.18.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.20.0",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.5.4"
   }
 }

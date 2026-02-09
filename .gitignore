@@ -29,6 +29,19 @@ node_modules
 # generated files
 dist/
 
+# npm package files
+*.tgz
+
+# macOS
+.DS_Store
+
+# Vite runtime
+.vite/
+*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
 #IDE
 .idea/
 
